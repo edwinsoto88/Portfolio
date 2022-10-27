@@ -227,8 +227,21 @@ a:hover {
   display: unset !important;
 }
 
+:root{
+  --gradient: linear-gradient(90deg, rgba(54, 10, 126, 0.644) , rgba(153, 45, 241, 0.836), #ff02f270);
+}
+
 .bg-primary {
-  background: #41228e !important;
+  background: rgb(161,0,255);
+  background: linear-gradient(90deg, rgba(161,0,255,1) 0%, rgba(9,9,121,1) 100%, rgba(0,0,0,1) 100%);
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {background-position: left;}
+  100% {background-position: right;}
 }
 
 .bg-gray {
